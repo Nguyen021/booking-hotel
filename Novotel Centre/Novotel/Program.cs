@@ -1,8 +1,12 @@
+using Novotel.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//ApplicationDbContext applicationDbContext = new(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+builder.Services.AddDbContext<ApplicationDbContext>(
+    option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

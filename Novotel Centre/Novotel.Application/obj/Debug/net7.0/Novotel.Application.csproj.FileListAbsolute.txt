@@ -1,0 +1,11 @@
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\bin\Debug\net7.0\Novotel.Application.deps.json
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\bin\Debug\net7.0\Novotel.Application.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\bin\Debug\net7.0\Novotel.Application.pdb
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.AssemblyInfoInputs.cache
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.AssemblyInfo.cs
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.csproj.CoreCompileInputs.cache
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\refint\Novotel.Application.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\Novotel.Application.pdb
+D:\Project\booking-hotel\Novotel Centre\Novotel.Application\obj\Debug\net7.0\ref\Novotel.Application.dll
