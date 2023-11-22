@@ -1053,6 +1053,16 @@
             "rid": "win"
           }
         }
+      },
+      "Novotel.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Novotel.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Novotel.Domain.dll": {}
+        }
       }
     }
   },
@@ -2875,13 +2885,19 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Novotel.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Novotel.Domain/Novotel.Domain.csproj",
+      "msbuildProject": "../Novotel.Domain/Novotel.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.14"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
+      "Novotel.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2910,7 +2926,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj": {
+              "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

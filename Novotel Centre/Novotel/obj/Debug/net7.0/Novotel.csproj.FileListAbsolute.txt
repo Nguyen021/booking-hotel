@@ -75,3 +75,5 @@ D:\Project\booking-hotel\Novotel Centre\Novotel\bin\Debug\net7.0\Novotel.Infrast
 D:\Project\booking-hotel\Novotel Centre\Novotel\bin\Debug\net7.0\Novotel.Infrastructure.pdb
 D:\Project\booking-hotel\Novotel Centre\Novotel\obj\Debug\net7.0\Novotel.csproj.AssemblyReference.cache
 D:\Project\booking-hotel\Novotel Centre\Novotel\obj\Debug\net7.0\Novotel.csproj.CopyComplete
+D:\Project\booking-hotel\Novotel Centre\Novotel\bin\Debug\net7.0\Novotel.Domain.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel\bin\Debug\net7.0\Novotel.Domain.pdb

@@ -1042,11 +1042,22 @@
           }
         }
       },
+      "Novotel.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Novotel.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Novotel.Domain.dll": {}
+        }
+      },
       "Novotel.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Novotel.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Novotel.Infrastructure.dll": {}
@@ -2851,6 +2862,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Novotel.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Novotel.Domain/Novotel.Domain.csproj",
+      "msbuildProject": "../Novotel.Domain/Novotel.Domain.csproj"
     },
     "Novotel.Infrastructure/1.0.0": {
       "type": "project",

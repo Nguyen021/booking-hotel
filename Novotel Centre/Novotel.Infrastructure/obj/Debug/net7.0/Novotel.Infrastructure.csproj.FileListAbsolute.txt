@@ -12,3 +12,6 @@ D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\obj\Debug\net7.0\
 D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\obj\Debug\net7.0\Novotel.Infrastructure.pdb
 D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\obj\Debug\net7.0\Novotel.Infrastructure.genruntimeconfig.cache
 D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\obj\Debug\net7.0\ref\Novotel.Infrastructure.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\bin\Debug\net7.0\Novotel.Domain.dll
+D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\bin\Debug\net7.0\Novotel.Domain.pdb
+D:\Project\booking-hotel\Novotel Centre\Novotel.Infrastructure\obj\Debug\net7.0\Novotel.Infrastructure.csproj.CopyComplete
