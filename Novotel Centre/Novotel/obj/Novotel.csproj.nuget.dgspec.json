@@ -160,6 +160,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj": {
+                "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj"
+              },
               "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Infrastructure\\Novotel.Infrastructure.csproj": {
                 "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Infrastructure\\Novotel.Infrastructure.csproj"
               }
@@ -185,6 +188,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
