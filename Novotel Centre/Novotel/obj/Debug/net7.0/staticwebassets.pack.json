@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\notfound.svg",
+      "PackagePath": "staticwebassets\\images\\notfound.svg"
+    },
+    {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\slide-1.jpg",
+      "PackagePath": "staticwebassets\\images\\slide-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\slide-2.jpg",
+      "PackagePath": "staticwebassets\\images\\slide-2.jpg"
+    },
+    {
       "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

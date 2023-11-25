@@ -39,5 +39,53 @@ namespace Novotel.Controllers
             }
             return View();
         }
+
+        public IActionResult Update(int houseId)
+        {       
+            House? house = _context.Houses.FirstOrDefault(u => u.Id.Equals(houseId));
+
+            House? houseList = _context.Houses.Where(u=> u.Price > 50 && u.Occupancy >0).FirstOrDefault();
+            if(house == null)
+            {
+                return RedirectToAction("Error","Home");
+            }
+            return View(house);
+        }
+
+        [HttpPost]
+        public IActionResult Update(House house)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Houses.Update(house);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "House");
+            }
+            return View();
+        }
+
+        public IActionResult Delete(int houseId)
+        {
+            House? house = _context.Houses.FirstOrDefault(u => u.Id.Equals(houseId));
+
+            if (house is null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            return View(house);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(House house)
+        {
+            House? houseFromDb = _context.Houses.FirstOrDefault(u => u.Id.Equals(house.Id));
+            if (houseFromDb is not null)
+            {
+                _context.Houses.Remove(houseFromDb);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }
