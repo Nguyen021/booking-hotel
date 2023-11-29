@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\1000_F_236725407_6CpBcS06L4QbZSHimVsLU64hpsafZnSW.jpg",
+      "PackagePath": "staticwebassets\\images\\1000_F_236725407_6CpBcS06L4QbZSHimVsLU64hpsafZnSW.jpg"
+    },
+    {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\Hotel Booking-rafiki.png",
+      "PackagePath": "staticwebassets\\images\\Hotel Booking-rafiki.png"
+    },
+    {
       "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\logo-1.jpg",
       "PackagePath": "staticwebassets\\images\\logo-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\logo-title-2.png",
+      "PackagePath": "staticwebassets\\images\\logo-title-2.png"
+    },
+    {
+      "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\logo-title.png",
+      "PackagePath": "staticwebassets\\images\\logo-title.png"
     },
     {
       "Id": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel\\wwwroot\\images\\notfound.svg",

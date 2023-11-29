@@ -48,7 +48,39 @@ namespace Novotel.Infrastructure.Data
                     Sqft = 650,
                 }
                 );
+            modelBuilder.Entity<HouseNumber>().HasData(
+                new HouseNumber
+                {
+                    House_Number = 101,
+                    HouseId = 1,
+                },
+                 new HouseNumber
+                 {
+                     House_Number = 102,
+                     HouseId = 1,
+                 },
+                  new HouseNumber
+                  {
+                      House_Number = 103,
+                      HouseId = 1,
+                  },
+                   new HouseNumber
+                   {
+                       House_Number = 201,
+                       HouseId = 2,
+                   },
+                    new HouseNumber
+                    {
+                        House_Number = 202,
+                        HouseId = 2,
+                    }
+                );
+
         }
+
+        public DbSet<HouseNumber> HousesNumbers { get; set; }
+
+
     }
    
 }
