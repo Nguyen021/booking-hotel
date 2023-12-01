@@ -21,7 +21,15 @@
                     <label asp-for="House_Number" class="ms-2"></label>
                     <span asp-validation-for="House_Number" class="text-danger"></span>
                 </div>
+
+
                 <div class="form-floating py-2 col-12">
+                    <input asp-for="@Model.HouseId" class="form-control border shadow" />
+                    <label asp-for="HouseId" class="ms-2"></label>
+                    <span asp-validation-for="HouseId" class="text-danger"></span>
+                </div>
+
+                @* <div class="form-floating py-2 col-12">
                     <select asp-for="@Model.HouseId" id="HouseId" name="HouseId" class="form-control border shadow">
                         <option value="MX">Mexico</option>
                         @if  (ViewData["Houses"] is List<House> houses){
@@ -30,17 +38,16 @@
                                 <option selected="selected" value="@house.Id">@house.Name</option>
                             }
                         }
-                       
                     </select>
                     <label asp-for="HouseId" class="ms-2">HouseId</label>
-                </div>
+                </div> *@
+
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.SpecialDetails" class="form-control border shadow" />
                     <label asp-for="SpecialDetails" class="ms-2"></label>
                     <span asp-validation-for="SpecialDetails" class="text-danger"></span>
                 </div>
                 
-              
               
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">

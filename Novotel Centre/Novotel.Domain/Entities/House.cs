@@ -28,6 +28,9 @@ namespace Novotel.Domain.Entities
         [Display(Name = "Image Url")]
         public string? ImageUrl { get; set; }
 
+        [Display(Name = "House Type")]
+        public string? HouseType { get; set; }
+
         public DateTime? CreatedDate { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedDate { get;set; }

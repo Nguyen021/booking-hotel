@@ -15,7 +15,9 @@ namespace Novotel.Domain.Entities
 
         [ForeignKey("House")]
         public int HouseId { get; set; }
+
         public House? House { get; set; }
         public string? SpecialDetails { get; set; }
+        public string? Status { get; set; }
     }
 }
