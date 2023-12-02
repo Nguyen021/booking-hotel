@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Novotel.Domain.Entities;
 using Novotel.Infrastructure.Data;
+using Novotel.ViewModels;
 
 namespace Novotel.Controllers
 {
@@ -20,11 +22,39 @@ namespace Novotel.Controllers
         }
         public IActionResult Create()
         {
-            var houses = _context.Houses.ToList();
+            //var houses = _context.Houses.ToList();
 
-            // Truyền danh sách nhà vào ViewData
-            ViewData["Houses"] = houses;
-            return View();
+            //// Truyền danh sách nhà vào ViewData
+            //ViewData["Houses"] = houses;
+
+            //IEnumerable<SelectListItem> list = _context.Houses.ToList().Select(
+            //    u => new SelectListItem{
+            //    Text=u.Name,
+            //    Value = u.Id.ToString()
+            //});
+            //ViewBag.HouseList = list;
+
+            //return View();
+
+
+
+
+
+
+
+            HouseNumberVM houseNumberVM = new()
+            {
+                HouseList = _context.Houses.ToList().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString(),
+                })
+            };
+                
+            return View(houseNumberVM);
+
+
+
         }
         [HttpPost]
         public IActionResult Create(HouseNumber houseNumber) 
