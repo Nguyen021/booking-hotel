@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Novotel.Domain.Entities;
 using Novotel.Infrastructure.Data;
 using Novotel.ViewModels;
@@ -17,7 +18,7 @@ namespace Novotel.Controllers
         }
         public IActionResult Index()
         {
-            var houseNumbers = _context.HousesNumbers.ToList();
+            var houseNumbers = _context.HousesNumbers.Include(u=>u.House).ToList();
             return View(houseNumbers);
         }
         public IActionResult Create()
@@ -35,11 +36,6 @@ namespace Novotel.Controllers
             //ViewBag.HouseList = list;
 
             //return View();
-
-
-
-
-
 
 
             HouseNumberVM houseNumberVM = new()
