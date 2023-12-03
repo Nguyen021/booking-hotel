@@ -4,7 +4,7 @@
     <div class="card-header shadow-lg ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="text-secondary py-2">Create Houses Number</h3>
+                <h3 class="text-secondary py-2">Update Houses Number</h3>
             </div>
         </div>
     </div>
@@ -12,31 +12,21 @@
     <div class="card-body border p-4">
         <form method="post" class="border p-4">
             <div class="p-3">
-                 <div asp-validation-summary="ModelOnly" class="alert alert-dark" role="alert">
-
+                <div asp-validation-summary="ModelOnly" class="alert alert-dark" role="alert">
                 </div>
+                <input asp-for="@Model.HouseNumber.House_Number" hidden />
                 <div class="form-floating py-2 col-12">
-                    <input asp-for="@Model.HouseNumber.House_Number" class="form-control border shadow" />
+                    <input asp-for="@Model.HouseNumber.House_Number" disabled class="form-control border shadow" />
                     <label asp-for="HouseNumber.House_Number" class="ms-2"></label>
                     <span asp-validation-for="HouseNumber.House_Number" class="text-danger"></span>
                 </div>
-           @*      <div class="form-floating py-2 col-12">
-                    <select asp-for="@Model.HouseId" id="HouseId" name="HouseId" class="form-control border shadow">
-                        @if  (ViewData["Houses"] is List<House> houses){
-                            @foreach (var house in houses)
-                            {
-                                <option selected="selected" value="@house.Id">@house.Name</option>
-                            }
-                        }
-                    </select>
-                    <label asp-for="HouseId" class="ms-2">HouseId</label>
-                </div>  *@
+               
 
                 <div class="form-floating py-2 col-12">
                     <select asp-for="@Model.HouseNumber.HouseId" asp-items="@Model.HouseList"
                             class="form-select shadow">
                         <option disabled selected>Select your option</option>
-                   </select>
+                    </select>
                     <label asp-for="HouseNumber.HouseId" class="ms-2"></label>
                     <span asp-validation-for="HouseNumber.HouseId" class="text-danger"></span>
                 </div>
@@ -46,7 +36,7 @@
                     <label asp-for="HouseNumber.SpecialDetails" class="ms-2"></label>
                     <span asp-validation-for="HouseNumber.SpecialDetails" class="text-danger"></span>
                 </div>
-                
+
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
                         <button class="btn btn-success w-100">
