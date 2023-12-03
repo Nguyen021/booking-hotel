@@ -36,7 +36,7 @@ namespace Novotel.Controllers
                 _context.Houses.Add(house);
                 _context.SaveChanges();
                 TempData["success"] = "The house has been created successfully.";
-                return RedirectToAction("Index", "House");
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
@@ -61,7 +61,7 @@ namespace Novotel.Controllers
                 _context.Houses.Update(house);
                 _context.SaveChanges();
                 TempData["success"] = "The house has been updated successfully.";
-                return RedirectToAction("Index", "House");
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
@@ -86,7 +86,7 @@ namespace Novotel.Controllers
                 _context.Houses.Remove(houseFromDb);
                 _context.SaveChanges();
                 TempData["success"] = "The house has been deleted successfully.";
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             TempData["error"] = "The house could not been be deleted.";
             return View();

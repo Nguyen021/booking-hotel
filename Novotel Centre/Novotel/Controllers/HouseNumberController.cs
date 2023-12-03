@@ -63,7 +63,7 @@ namespace Novotel.Controllers
                     _context.HousesNumbers.Add(obj.HouseNumber);
                     _context.SaveChanges();
                     TempData["success"] = "The house number has been created successfully.";
-                    return RedirectToAction("Index", "HouseNumber");
+                    return RedirectToAction(nameof(Index));
                 }catch(Exception ex) {
                     TempData["error"] = "error somthing";
                     return View();
@@ -93,8 +93,10 @@ namespace Novotel.Controllers
                     Value = h.Id.ToString()
                 }),
                 HouseNumber = _context.HousesNumbers.FirstOrDefault(x => x.House_Number.Equals(houseNumberId))
+
+
             };
-            if (houseNumberVM == null) {
+            if (houseNumberVM.HouseList == null || houseNumberVM.HouseNumber ==null) {
                 return RedirectToAction("Error", "Home");
             }
             return View(houseNumberVM);
@@ -109,7 +111,7 @@ namespace Novotel.Controllers
                     _context.HousesNumbers.Update(obj.HouseNumber);
                     _context.SaveChanges();
                     TempData["success"] = "The house number has been updated successfully.";
-                    return RedirectToAction("Index", "HouseNumber");
+                    return RedirectToAction(nameof(Index));
               
             }
 
@@ -121,6 +123,41 @@ namespace Novotel.Controllers
             
             return View(obj);
 
+        }
+
+        public IActionResult Delete(int houseNumberId)
+        {
+
+            HouseNumberVM houseNumberVM = new()
+            {
+                HouseList = _context.Houses.ToList().Select(h => new SelectListItem
+                {
+                    Text = h.Name,
+                    Value = h.Id.ToString()
+                }),
+                HouseNumber = _context.HousesNumbers.FirstOrDefault(x => x.House_Number.Equals(houseNumberId))
+            };
+            if (houseNumberVM.HouseList == null || houseNumberVM.HouseNumber == null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            return View(houseNumberVM);
+        }
+        [HttpPost]
+        public IActionResult Delete(HouseNumberVM houseNumberVM)
+        {
+            HouseNumber objFromDb = _context.HousesNumbers.FirstOrDefault(u => u.House_Number.Equals(houseNumberVM.HouseNumber));
+           
+            if(objFromDb is not null) { 
+                _context.HousesNumbers.Remove(houseNumberVM.HouseNumber);
+                _context.SaveChanges();
+                TempData["success"] = "The house number has been removed successfully.";
+                return RedirectToAction(nameof(Index));
+            };
+
+            TempData["error"] = "The house number could not removed successfully.";
+
+            return View();
         }
     }
 }
