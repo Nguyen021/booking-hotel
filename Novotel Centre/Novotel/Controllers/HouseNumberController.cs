@@ -16,6 +16,7 @@ namespace Novotel.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             var houseNumbers = _context.HousesNumbers.Include(u=>u.House).ToList();
@@ -25,37 +26,23 @@ namespace Novotel.Controllers
         {
             //var houses = _context.Houses.ToList();
 
-            //// Truyền danh sách nhà vào ViewData
             //ViewData["Houses"] = houses;
 
-            //IEnumerable<SelectListItem> list = _context.Houses.ToList().Select(
-            //    u => new SelectListItem{
-            //    Text=u.Name,
-            //    Value = u.Id.ToString()
-            //});
-            //ViewBag.HouseList = list;
-
-            //return View();
-
-
-            HouseNumberVM houseNumberVM = new()
+            IEnumerable<SelectListItem> list = _context.Houses.ToList().Select(h => new SelectListItem
             {
-                HouseList = _context.Houses.ToList().Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString(),
-                })
-            };
-                
-            return View(houseNumberVM);
+                Text = h.Name,
+                Value = h.Id.ToString()
+            });
 
+            ViewData["HouseList"] = list;
+            return View();
 
 
         }
         [HttpPost]
         public IActionResult Create(HouseNumber houseNumber) 
-        {   
-            
+        {
+            //ModelState.Remove("House");
             if(ModelState.IsValid)
             {
                 _context.HousesNumbers.Add(houseNumber);
@@ -63,58 +50,14 @@ namespace Novotel.Controllers
                 TempData["success"] = "The house number has been created successfully.";
                 return RedirectToAction("Index", "HouseNumber");
             }
+
+            //TempData["error"] = "Something error try again!";
+            //var houses = _context.Houses.ToList();
+            //ViewData["Houses"] = houses;
+
             return View();
         }
 
-        public IActionResult Update(int houseId)
-        {       
-            House? house = _context.Houses.FirstOrDefault(u => u.Id.Equals(houseId));
-
-            House? houseList = _context.Houses.Where(u=> u.Price > 50 && u.Occupancy >0).FirstOrDefault();
-            if(house == null)
-            {
-                return RedirectToAction("Error","Home");
-            }
-            return View(house);
-        }
-
-        [HttpPost]
-        public IActionResult Update(House house)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Houses.Update(house);
-                _context.SaveChanges();
-                TempData["success"] = "The house has been updated successfully.";
-                return RedirectToAction("Index", "House");
-            }
-            return View();
-        }
-
-        public IActionResult Delete(int houseId)
-        {
-            House? house = _context.Houses.FirstOrDefault(u => u.Id.Equals(houseId));
-
-            if (house is null)
-            {
-                return RedirectToAction("Error", "Home");
-            }
-            return View(house);
-        }
-
-        [HttpPost]
-        public IActionResult Delete(House house)
-        {
-            House? houseFromDb = _context.Houses.FirstOrDefault(u => u.Id.Equals(house.Id));
-            if (houseFromDb is not null)
-            {
-                _context.Houses.Remove(houseFromDb);
-                _context.SaveChanges();
-                TempData["success"] = "The house has been deleted successfully.";
-                return RedirectToAction("Index");
-            }
-            TempData["error"] = "The house could not been be deleted.";
-            return View();
-        }
+        
     }
 }

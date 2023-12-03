@@ -1062,7 +1062,10 @@
         },
         "runtime": {
           "bin/placeholder/Novotel.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
