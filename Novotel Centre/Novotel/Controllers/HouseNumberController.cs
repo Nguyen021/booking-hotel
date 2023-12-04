@@ -36,7 +36,6 @@ namespace Novotel.Controllers
 
             //ViewBag.List = list;
 
-
             HouseNumberVM houseNumberVM = new HouseNumberVM  {
                 HouseList = _context.Houses.ToList().Select(h => new SelectListItem
                 {
@@ -45,8 +44,6 @@ namespace Novotel.Controllers
                 })
             };
             return View(houseNumberVM);
-
-
         }
         [HttpPost]
         public IActionResult Create(HouseNumberVM obj) 

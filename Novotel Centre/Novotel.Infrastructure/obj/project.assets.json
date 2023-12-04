@@ -1054,6 +1054,19 @@
           }
         }
       },
+      "Novotel.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Novotel.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Novotel.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Novotel.Application.dll": {}
+        }
+      },
       "Novotel.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2889,6 +2902,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Novotel.Application/1.0.0": {
+      "type": "project",
+      "path": "../Novotel.Application/Novotel.Application.csproj",
+      "msbuildProject": "../Novotel.Application/Novotel.Application.csproj"
+    },
     "Novotel.Domain/1.0.0": {
       "type": "project",
       "path": "../Novotel.Domain/Novotel.Domain.csproj",
@@ -2900,6 +2918,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
+      "Novotel.Application >= 1.0.0",
       "Novotel.Domain >= 1.0.0"
     ]
   },
@@ -2930,6 +2949,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Application\\Novotel.Application.csproj": {
+              "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Application\\Novotel.Application.csproj"
+            },
             "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj": {
               "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj"
             }

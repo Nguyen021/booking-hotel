@@ -1,5 +1,7 @@
 using Novotel.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Novotel.Application.Common.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +9,8 @@ builder.Services.AddControllersWithViews();
 //ApplicationDbContext applicationDbContext = new(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 builder.Services.AddDbContext<ApplicationDbContext>(
     option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+
+builder.Services.AddScoped<IHouseRepository,IHouseRepository>();
 
 var app = builder.Build();
 

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Novotel.Domain\Novotel.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
