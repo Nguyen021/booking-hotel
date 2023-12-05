@@ -11,7 +11,7 @@ namespace Novotel.Application.Common.Interface
     public interface IHouseRepository
     {
         IEnumerable<House> GetAll(Expression<Func<House,bool>>? filter = null, string? includeProperty = null);
-        IEnumerable<House> Get(Expression<Func<House, bool>> filter, string? includeProperty = null);
+        House Get(Expression<Func<House, bool>> filter, string? includeProperty = null);
         void Update(House entity); 
         void Add(House entity);
         void Delete(House entity);

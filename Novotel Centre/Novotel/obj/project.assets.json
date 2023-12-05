@@ -3873,8 +3873,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
-          "Novotel.Application": "1.0.0",
-          "Novotel.Domain": "1.0.0"
+          "Novotel.Application": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Novotel.Infrastructure.dll": {}
@@ -11225,7 +11224,6 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
-      "Novotel.Domain >= 1.0.0",
       "Novotel.Infrastructure >= 1.0.0"
     ]
   },
@@ -11256,9 +11254,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj": {
-              "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj"
-            },
             "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Infrastructure\\Novotel.Infrastructure.csproj": {
               "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Infrastructure\\Novotel.Infrastructure.csproj"
             }

@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Novotel.Domain\Novotel.Domain.csproj" />
     <ProjectReference Include="..\Novotel.Infrastructure\Novotel.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -147,9 +147,6 @@
             "projectReferences": {
               "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Application\\Novotel.Application.csproj": {
                 "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Application\\Novotel.Application.csproj"
-              },
-              "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj": {
-                "projectPath": "D:\\Project\\booking-hotel\\Novotel Centre\\Novotel.Domain\\Novotel.Domain.csproj"
               }
             }
           }

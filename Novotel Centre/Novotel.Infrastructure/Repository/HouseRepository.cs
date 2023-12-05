@@ -1,5 +1,7 @@
-﻿using Novotel.Application.Common.Interface;
+﻿using Microsoft.EntityFrameworkCore;
+using Novotel.Application.Common.Interface;
 using Novotel.Domain.Entities;
+using Novotel.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,34 +13,67 @@ namespace Novotel.Infrastructure.Repository
 {
     public class HouseRepository : IHouseRepository
     {
+        private readonly ApplicationDbContext _context;
+
+        public HouseRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public void Add(House entity)
         {
-            throw new NotImplementedException();
+           _context.Add(entity);
         }
 
         public void Delete(House entity)
         {
-            throw new NotImplementedException();
+            _context.Remove(entity);
         }
 
-        public IEnumerable<House> Get(Expression<Func<House, bool>> filter, string? includeProperty = null)
+        public House Get(Expression<Func<House, bool>> filter, string? includeProperty = null)
         {
-            throw new NotImplementedException();
+            IQueryable<House> query = _context.Set<House>();
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            if (!string.IsNullOrEmpty(includeProperty))
+            {
+                foreach (var includeProp in includeProperty
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+            return query.FirstOrDefault();
         }
 
         public IEnumerable<House> GetAll(Expression<Func<House, bool>>? filter = null, string? includeProperty = null)
         {
-            throw new NotImplementedException();
+            IQueryable<House> query = _context.Set<House>();
+            if(filter != null)
+            {
+                query = query.Where(filter);
+            } 
+            if(!string.IsNullOrEmpty(includeProperty))
+            {
+                foreach (var includeProp in includeProperty
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }   
+            return query.ToList();
         }
 
         public void SaveEntity()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
 
         public void Update(House entity)
         {
-            throw new NotImplementedException();
+           _context.Houses.Update(entity);
         }
     }
 }
