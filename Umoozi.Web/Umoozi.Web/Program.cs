@@ -1,7 +1,16 @@
+
+
+using Microsoft.EntityFrameworkCore;
+using Umoozi.Structure.DbData;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Add config DBContext
+builder.Services.AddDbContext<ApplicationDbContext>(option => 
+option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConStr")));
 
 var app = builder.Build();
 
