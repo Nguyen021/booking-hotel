@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Umoozi.Domain.Entities.House>
+
+<div class="w-100 card border-0 p-4">
+    <div class="ml-0 py-3 bg-gradient bg-success card-header">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Houses List</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4 border">
+        <div class="row pb-3">
+            <div class="col-6 offset-6 text-end">
+                <a asp-controller="House" asp-action="Create" class="btn btn-secondary">
+                    <i class="bi bi-plus-circle"></i> Create new house
+                </a>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Sqft
+                    </th>
+                    <th>
+                        Occupancy
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Price</td>
+                        <td>@item.SquareFeet</td>
+                        <td>@item.Occupancy</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

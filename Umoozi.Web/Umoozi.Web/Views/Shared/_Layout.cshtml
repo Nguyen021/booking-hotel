@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Umoozi.Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Umoozi.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,500&display=swap" rel="stylesheet">
+    <style>
+        .switch-mode {
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            z-index: 100;
+            right: 1em;
+            /* color: var(--foreground); */
+            color: #9aacb6;
+            border:none;
+            padding: 4px;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .click-here {
+            right: 1.5em;
+            position: absolute;
+            top: 3em;
+        }
+
+        :root {
+            --clr-light: #fdffc4;
+            --clr-dark: #00332a;
+            --clr-primary: #dbffa2;
+            --clr-secondary: #c3fcf2;
+            --clr-accent: #ff7750;
+            --foreground: var(--clr-dark);
+            --background: var(--clr-light);
+            --ff-title: "Playfair Display", serif;
+            --ff-body: "Assistant", sans-serif;
+        }
+
+        .darkmode {
+            --clr-light: #fdffc4;
+            --clr-dark: #00332a;
+            --clr-primary: #202302;
+            --clr-secondary: #00100d;
+            --clr-accent: #ff7750;
+            --foreground: var(--clr-light);
+            --background: var(--clr-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Umoozi.Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="House" asp-action="">Houses</a>
+                        </li>
+                        @* <li class="nav-item text-end offset-8">
+                        <div class="form-check form-switch mx-4">
+                        <input class="form-check-input p-2" onclick="changeTheme();" type="checkbox" checked id="flexSwitchCheckDefault">
+                        </div>
+                        </li> *@
+                        <li>
+                            <div>
+                                <button onclick="changeTheme();" id="dark-mode-toggle" class="dark-mode-toggle">
+                                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)" /></svg>
+
+                                </button>
+                              
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Umoozi.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script>
+
+        const html = document.documentElement;
+        const storedTheme = localStorage.getItem("theme");
+        html.dataset.bsTheme = storedTheme;
+
+        const changeTheme = () => {
+            const html = document.documentElement;
+            html.dataset.bsTheme = html.dataset.bsTheme === 'light' ? "dark" : "light";
+            localStorage.setItem("theme", html.dataset.bsTheme);
+        }
+
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

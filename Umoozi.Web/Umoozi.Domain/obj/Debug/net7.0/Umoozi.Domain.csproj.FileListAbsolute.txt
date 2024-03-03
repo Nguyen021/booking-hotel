@@ -1,0 +1,23 @@
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.deps.json
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.dll
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.pdb
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.AssemblyInfoInputs.cache
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.AssemblyInfo.cs
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.csproj.CoreCompileInputs.cache
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.dll
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\refint\Umoozi.Domain.dll
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.pdb
+D:\Project\Booking_v2\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\ref\Umoozi.Domain.dll
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.deps.json
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.dll
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\bin\Debug\net7.0\Umoozi.Domain.pdb
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.AssemblyInfoInputs.cache
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.AssemblyInfo.cs
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.dll
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\refint\Umoozi.Domain.dll
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.pdb
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\ref\Umoozi.Domain.dll
+C:\Users\duong\OneDrive\Máy tính\Umoozi\booking-hotel\Umoozi.Web\Umoozi.Domain\obj\Debug\net7.0\Umoozi.Domain.sourcelink.json
